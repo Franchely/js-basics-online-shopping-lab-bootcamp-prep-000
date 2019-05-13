@@ -56,7 +56,7 @@ function removeFromCart(item) {
   console.log(cart.indexOf(item))
   var cartItem = cart.indexOf(item)
           cart.splice(cartItem,1)
-          return cart
+         // return cart
     
   }
  
