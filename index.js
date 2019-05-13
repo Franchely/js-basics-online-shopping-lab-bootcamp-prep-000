@@ -61,9 +61,6 @@ function removeFromCart(item) {
         cart = cart.slice(0,i).concat(cart.slice(i+1))
       }
     
-         
-         // return cart
-    
   }
   return cart
   }
