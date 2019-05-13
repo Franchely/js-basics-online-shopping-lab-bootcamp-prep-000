@@ -61,7 +61,7 @@ function removeFromCart(item) {
         cart = cart.splice(i, 1)
       }
     
-         return cart.splice(cartItem,1)
+         return cart
          // return cart
     
   }
