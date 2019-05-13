@@ -10,21 +10,62 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+  let price = Math.floor(Math.random() * (99 - 1) + 1)
+
+ cart.push({itemName: item,  itemPrice: price} )
+ 
+ return `${item} has been added to your cart.`
+ return cart;
 }
 
 function viewCart() {
-  // write your code here
-}
+
+  if (cart.length === 0) {
+    return "Your shopping cart is empty."
+  } else if (cart.length === 1) {
+  return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`
+   } else if (cart.length === 2) {
+     for (var i = 0; i < cart.length; i++) {
+       return `In your cart, you have ${cart[i].itemName} at $${cart[i].itemPrice}, and ${cart[i+1].itemName} at $${cart[i+1].itemPrice}.` } 
+      } else {
+        
+          var last = cart[cart.length - 1] 
+           var newArray = []
+        
+         for (i = 0; i < cart.length - 1; i++) { 
+        
+         newArray.push(`${cart[i].itemName} at $${cart[i].itemPrice}`) 
+         
+       } 
+       return `In your cart, you have ` + newArray.join(", ") + ", and " + last.itemName + " at $" + last.itemPrice + "."
+      } return cart;
+   } 
 
 function total() {
-  // write your code here
-}
+  var sum = 0
+  for (var i = 0; i < cart.length; i++) {
+   sum += parseInt(cart[i].itemPrice) 
+  } return sum 
+
+} 
+
 
 function removeFromCart(item) {
-  // write your code here
-}
+  for(var i = 0, l = cart.length; i < l; i++){
+    for(var list in cart[i]){
+        if(item === list){
+          cart.splice(i,1)
+          return cart
+        }
+    }
+  }
+}  
 
 function placeOrder(cardNumber) {
-  // write your code here
+  if (cardNumber)isNaN; {
+    return "Sorry, we don't have a credit card on file for you."
+  }  else {
+    return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`
+  }
 }
+
