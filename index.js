@@ -51,12 +51,13 @@ function total() {
 
 
 function removeFromCart(item) {
+  //first we need to find the index of the item
+  // then we need to remove the item from the cart
   console.log(cart.indexOf(item))
-  for(var i = 0, l = cart.length; i < l; i++){
-        {
-          cart.splice(i,1)
+  var cartItem = cart.indexOf(item)
+          cart.splice(cartitem,1)
           return cart
-    }
+    
   }
 }  
 
