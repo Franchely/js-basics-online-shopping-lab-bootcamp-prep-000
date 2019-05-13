@@ -51,7 +51,7 @@ function total() {
 
 
 function removeFromCart(item) {
-  console.log(cart.indexOf)
+  console.log(cart.indexOf(item))
   for(var i = 0, l = cart.length; i < l; i++){
         {
           cart.splice(i,1)
