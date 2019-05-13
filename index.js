@@ -54,7 +54,11 @@ function removeFromCart(item) {
   //first we need to find the index of the item
   // then we need to remove the item from the cart
   console.log(cart.indexOf(item))
+  
   var cartItem = cart.indexOf(item)
+  for(var i = 0; i < cart.length; i++)
+      if(cart[i].)
+    
          return cart.splice(cartItem,1)
          // return cart
     
